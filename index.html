@@ -18,43 +18,25 @@
 
     <main>
 
-        <section class="portfolio">
+<section class="stats">
 
-            <div class="coin">
-                <div>
-                    <strong>Bitcoin</strong>
-                    <span>BTC</span>
-                </div>
+    <div class="stat">
+        <strong>3</strong>
+        <span>Assets</span>
+    </div>
 
-                <div class="price">
-                    $95,200
-                </div>
-            </div>
+    <div class="stat">
+        <strong>$98,842</strong>
+        <span>Example Value</span>
+    </div>
 
-            <div class="coin">
-                <div>
-                    <strong>Ethereum</strong>
-                    <span>ETH</span>
-                </div>
+    <div class="stat">
+        <strong>3</strong>
+        <span>Tracked Coins</span>
+    </div>
 
-                <div class="price">
-                    $3,450
-                </div>
-            </div>
-
-            <div class="coin">
-                <div>
-                    <strong>Solana</strong>
-                    <span>SOL</span>
-                </div>
-
-                <div class="price">
-                    $192
-                </div>
-            </div>
-
-        </section>
-
+</section>
+        
     </main>
 
     <footer>
@@ -63,3 +45,32 @@
 
 </body>
 </html>
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 20px;
+}
+
+.stat span {
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
